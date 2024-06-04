@@ -18,6 +18,7 @@ USE `biblioteca` ;
 -- Table `biblioteca`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `biblioteca`.`usuario` (
+  `nome` VARCHAR(100) NOT NULL,
   `user` VARCHAR(100) NOT NULL,
   `senha` VARCHAR(255) NOT NULL,
   `admin` INT NULL,
@@ -104,7 +105,7 @@ VALUES
 'Jd. Palestra',
 'São Pauo-SP',
 '11967456747',
-'carlosmago@classedenewbie.com')
+'carlosmago@classedenewbie.com');
 
 
 INSERT INTO emprestimo (data_saida, data_retorno, cliente_id_cliente, livro_id) VALUES ('2024-03-05', '2024-03-10', 1, 1);
