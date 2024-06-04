@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 52px);
+}
+
+.headerContainer{
+    display: flex;
+    width: 100%;
+    height: 52px;
+    background: #A1372A;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuContainer{
+    width: 20%;
+    background: #E1C2A5;
+    -webkit-box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.menuContainerMobile{
+    display: none;
+    width: 50%;
+    background: #E1C2A5;
+    -webkit-box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.btnMenu{
+    position: absolute;
+    left: 78.1%;
+}
+
+.btnActive{
+    z-index: 999;
+}
+
+.p1{    
+    top: 8%;
+}
+
+.p2{    
+    top: 17%;
+}
+
+.p3{    
+    top: 26%;
+}
+
+.p4{
+    top: 35%;
+}
+
+.pExit{
+    top: 80%;
+}
+
+
+.mainContainer{
+    width: 80%;
+    background: #EDDAC9;
+    mix-blend-mode: normal;
+    -webkit-box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 0px 6px 0px rgba(0,0,0,0.75);
+    z-index: 99;
+    text-align: center;
+}
+
+.mainContainer form{    
+    margin-top: 55px;
+}
+
+.inputCase{
+    width: 690px;
+    height: 48px;
+    margin: 0 auto;
+
+    background: #FDFCFB;
+    border: none;
+    border-bottom: 4px solid #000000;
+    border-radius: 12px;
+}
+
+.inputCase .searchInput{
+    width: 690px;
+    height: 48px;
+
+    background: #FDFCFB;
+    border: none;
+    border-bottom: 4px solid #000000;
+    border-radius: 12px;
+    outline: none;
+    padding-left: 25px;
+
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+}
+
+.inputCase button{
+    position: relative;
+    width: 48px;
+    height: 48px;
+    right: -322px;
+    top: -48px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.inputCase button img{
+    background-size: contain;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.card{
+    width: 100%;
+    max-width: 864px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 52px;
+
+    background: #CFC0A6;
+    border-radius: 12px;
+    text-align: start;
+}
+
+.card .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.capa{
+    width: 107px;
+    height: 148px;
+    border-radius: 9px;
+}
+
+.card .content .capa img{
+    width: 107px;
+    height: 148px;
+    border-radius: 9px;
+}
+
+.head{
+    align-self: baseline;
+    margin-top: 21px;
+    margin-left: 47px;
+    margin-right: 90px;
+}
+
+.head h3{    
+    font-size: 20px;
+}
+
+.descricao{
+    margin-top: 21px;
+}
+
+.head p{
+    margin-top: 15px;
+}
+
+.btnSeta{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.rodar{
+    transform: rotate(180deg);
+}
+
+.btnSeta img{
+    width: 84px;
+    height: 48px;
+}
+
+.corpo{
+    display: none;
+    padding: 28px;
+    margin-top: -5px;    
+    max-width: 864px;
+    height: 280px;
+
+    background: #CFC0A6;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.ativo{
+    display: block;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     
+}
+
+.btnEditar{
+    display: flex;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.btnEditar img{
+    width: 25px;
+    height: 25px;
+}
+
+.sinopse{
+    margin-top: 28px;
+}
+
+.sinopse p{
+    margin-top: 11px;
+    text-align: justify;
+}
+
+.usuario{
+    display: flex;
+    width: 20%;
+    margin-right: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.usuario span{
+    font-size: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .menuContainer{
+        display: none;
+    }
+
+    .mainContainer{
+        width: 100%;
+    }
+}
+
+
+
+::-webkit-input-placeholder {
+    color: rgba(54, 97, 113, 0.68);
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color: rgba(54, 97, 113, 0.68);
+    text-align: center;
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(54, 97, 113, 0.68);
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    color: rgba(54, 97, 113, 0.68);
+    text-align: center; 
+ }

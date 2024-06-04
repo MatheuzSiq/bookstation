@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <style>
+        ::-webkit-scrollbar{
+            background-color: transparent;
+            width: 0;
+        }
+    </style>
+</head>
+<body style="overflow: hidden;">
+    <div class="d-flex justify-content-between" style="margin: 0;">
+        <div class="text-center" style="width: 80%;" >
+            <h1>Livraria</h1>
+        </div>
+        <div class="text-center mt-2" style="width: 20%;">
+            <button class="btn btn-outline-primary col-8">{{ nome }}</button>
+        </div>
+    </div>
+    
+    <div class="d-inline-flex" style="width: 100%;">
+        <div class="container">
+
+            <form class="d-block container col-3" action="{{url_for('buscar_estante')}}" method="POST">
+                <div class="input-group mb-5 mt-3">
+                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" name="busca">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+                </div>
+            </form>
+
+            <div class="container col-6">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %} 
+                    <ul id="messages" class="list-unstyled">
+                    {% for message in messages %}
+                        <li class="alert alert-success">{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                {% endwith %}
+            </div>
+            
+
+            <div class="d-block overflow-auto container" style="overflow-y: scroll; height: calc(100vh - 160px); width: 80%;">
+
+                {% for livro in livros %}       
+        
+                        <div class="card text-white bg-dark mb-3 col-8 container">
+                            <div class="card-header" style="justify-content: space-between; display: flex;">
+                                <figure>
+                                    <img src="{{ url_for('imagem', nome_arquivo=livro.id) }}" class="rounded float-start" style="width: 70px; height: 100px; border: 1px solid white;">
+                                </figure>
+                                <div class="col-6">
+                                    <h5 class="card-title">{{ livro.titulo }}</h5>
+                                    <p>Autor: {{ livro.autor }}</p>
+                                </div>
+                                <div class="col-3" style="text-align: right;">
+                                    <a href="{{ url_for('editar_livro', id=livro.id) }}"><span class="btn btn-primary p-4 m-1"></span></a>
+                                </div>                         
+                            </div>
+        
+                            <div class="card-body">
+                                <div class="align-items-center" style="justify-content: space-between; display: flex;">
+                                    <p class="text-center">Data de lançamento: {{ livro.lancamento.strftime('%d/%m/%Y') }}</p>
+                                    <p class="text-center ms-2">ISBN 10: {{ livro.isbn_10 }}</p>
+                                    <p class="text-center ms-2">ISBN 13: {{ livro.isbn_13 }}</p>
+                                    <div class="">
+                                        <a class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#collapseExample{{livro.id}}" aria-expanded="false" aria-controls="collapseExample">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>                
+                            </div>
+        
+                            <div class="collapse" id="collapseExample{{livro.id}}">
+                                <div class="card card-body bg-dark">
+                                    <p>{{ livro.sinopse }}</p>
+                                </div>
+                            </div>
+                        </div>                    
+                {% endfor %}
+                </div>
+        </div>
+        
+        <div class="d-block" style="width: 20%; height: 100vh; background-color: blue;">
+            <div class="mt-5">
+                <a href="{{url_for('cadastro_livro')}}" class="btn btn-dark">Cadastrar Livro</a>
+            </div>
+            <div class="mt-3">
+                <a href="{{url_for('cadastro_livro')}}" class="btn btn-dark">Cadastrar Cliente</a>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/bootstrap.js"></script>
+</body>
+</html>
