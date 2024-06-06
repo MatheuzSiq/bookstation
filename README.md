@@ -35,7 +35,7 @@ Sistema de gerenciamento de biblioteca.
 ### **3. Instale o virtualEnv e o inicie para criar uma ambiente isolado e instalar as dependencias:**
 * Abra o terminal na pasta do projeto e digite o comando `python -m pip install --user virtualenv` (utilize python3 para linux)
 * Execute o comando `python -m venv <nome da venv>` para criar um novo ambiente virtual (utilize python3 para linux)
-* Logo após é necessário ativar o ambiente por meio do comando `.\<nome da venv>\Scripts\activate` no windows e `source env_name/bin/activate`
+* Logo após é necessário ativar o ambiente por meio do comando `.\<nome da venv>\Scripts\activate` no windows e `source env_name/bin/activate` no Linux
 
 ### **4. Instale as dependencias utilizadas no projeto:**
 * Com o `venv` criado, fica muito mais facil de instalar as dependencias corretas para a execução do projeto.
