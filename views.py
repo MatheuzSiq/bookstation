@@ -44,8 +44,7 @@ def cadastro_livro():
 
 @app.route('/cadastrar-livro/buscar', methods=['POST',])
 def buscar_livro():
-    url = f'https://www.googleapis.com/books/v1/volumes?q=isbn:{
-        request.form['busca_livro']}'
+    url = f"https://www.googleapis.com/books/v1/volumes?q=isbn:{request.form['busca_livro']}"
 
     response = requests.get(url)
     data = response.json()
