@@ -39,7 +39,7 @@ Sistema de gerenciamento de biblioteca.
 
 ### **4. Instale as dependencias utilizadas no projeto:**
 * Com o `venv` criado, fica muito mais facil de instalar as dependencias corretas para a execução do projeto.
-* Basta ir no terminal e digitar o seguinte comando com o `venv` ativo: `pip freeze > requirements.txt`, desse modo todas as dependecias seram instaladas corretamente e na versão correta.
+* Basta ir no terminal e digitar o seguinte comando com o `venv` ativo: `pip install -r requirements.txt`, desse modo todas as dependecias seram instaladas corretamente e na versão correta.
 
 ## **5. Configurações e adequações:**
 * No arquivo `config.py` estão as configurações do banco de dados, esse arquivo tem que ser configurado
