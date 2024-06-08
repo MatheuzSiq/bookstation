@@ -92,7 +92,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 INSERT INTO usuario (nome, user, senha, admin, email) VALUES ("admin", "admin", "$2b$12$ewe26n9QJ81wHv4WFV/JqOikDYN/jRn/cyJsWYuhKjCZzHExy6PTa", 1, "admin@admin.com");
 
-INSERT INTO usuario (isbn_10, isbn_13, titulo, autor, lancamento, sinopse, quantidade) 
+INSERT INTO livro (isbn_10, isbn_13, titulo, autor, lancamento, sinopse, quantidade) 
 VALUES ("853253080X", "9788532530806", "Harry Potter e o Prisioneiro de Azkaban", "J.K. Rowling", 2017-08-19, "As aulas estão de volta à Hogwarts e Harry Potter não vê a hora de embarcar no expresso a vapor que o levará de volta à escola de bruxaria. Mais uma vez suas férias na rua dos Alfeneiros foi triste e solitária. Com muita ação, humor e magia, 'Harry Potter e o prisioneiro de Azkaban' traz de volta o gigante atrapalhado Rúbeo Hagrid, o sábio diretor Alvo Dumbledore, a exigente professora de transformação Minerva MacGonagall e o novo mestre Lupin, que guarda grandes surpresas para Harry.", 3);
 
 INSERT INTO cliente (nome, cpf, cep, endereco, numero, bairro, cidade, telefone, email) 
